@@ -1,0 +1,58 @@
+{
+  "name": "elm-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "nanci <yiminanci@gmail.com>",
+  "license": "GPL",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development supervisor --harmony index.js",
+    "local": "cross-env NODE_ENV=local supervisor --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production pm2 start index.js --node-args='--harmony' --name 'elm-node --port 8001'",
+    "stop": "cross-env NODE_ENV=production pm2 stop index.js --name 'elm-node --port 8001'",
+    "restart": "cross-env NODE_ENV=production pm2 restart index.js --node-args='--harmony' --name 'elm-node --port 8001'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guonanci/elm-node"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "bluebird": "^3.5.2",
+    "captchapng": "^0.0.1",
+    "chalk": "^2.4.1",
+    "config-lite": "^2.1.0",
+    "connect-flash": "^0.1.1",
+    "connect-history-api-fallback": "^1.5.0",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "express-winston": "^3.0.0",
+    "formidable": "^1.2.1",
+    "gm": "^1.23.1",
+    "marked": "^0.5.1",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.2",
+    "pinyin": "^2.8.3",
+    "pm2": "^3.2.2",
+    "qiniu": "^7.2.1",
+    "sha1": "^1.1.1",
+    "supervisor": "^0.12.0",
+    "time-formater": "^1.0.3",
+    "time-stamp": "^2.1.0",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-export-extensions": "^6.22.0"
+  }
+}
